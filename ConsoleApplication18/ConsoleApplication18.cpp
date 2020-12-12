@@ -11,10 +11,10 @@ public:
 	std::string s;
 	node* next;
 	static int length;
-	node(int i)			{ __init__(i);					}
+	node(int i)		{ __init__(i);					}
 	node(double f)		{ __init__(0, f);				}
-	node(char c)		{ __init__(0, 0, c);			}
-	node(std::string s) { __init__(0, 0, '\0', s);		}
+	node(char c)		{ __init__(0, 0, c);				}
+	node(std::string s) 	{ __init__(0, 0, '\0', s);			}
 
 	void __init__(int i = 0, double f = 0.0, char c = '\0', std::string s = "")
 	{
@@ -35,8 +35,8 @@ public:
 	{
 		std::cout << "(";
 		if (i != 0)			std::cout << i;
-		else if (f != 0)	std::cout << f;
-		else if (c != '\0')	std::cout << c;
+		else if (f != 0)		std::cout << f;
+		else if (c != '\0')		std::cout << c;
 		else				std::cout << s;
 		std::cout << ")-->" ;
 	}
@@ -44,8 +44,8 @@ public:
 	{
 		std::string s1="";
 		if (i != 0)			s1 += std::to_string(i);
-		else if (f != 0)	s1 += std::to_string(f);
-		else if (c != '\0')	s1 += std::to_string(c);
+		else if (f != 0)		s1 += std::to_string(f);
+		else if (c != '\0')		s1 += std::to_string(c);
 		else				s1 += s;
 		return s1;
 	}
